@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Four card feature section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+      :root {
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        --Red: hsl(0, 78%, 62%);
+        --Cyan: hsl(180, 62%, 55%);
+        --Orange: hsl(34, 97%, 64%);
+        --Blue: hsl(212, 86%, 64%);
+        --Very-Dark-Blue: hsl(234, 12%, 34%);
+        --Grayish-Blue: hsl(229, 6%, 66%);
+        --Very-Light-Gray: hsl(0, 0%, 98%);
+      }
+
+      p {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        background: var(--Very-Light-Gray);
+        padding: 4em 2em;
+      }
+
+      .bold-heading,
+      .item-heading {
+        color: var(--Very-Dark-Blue);
+        font-weight: 600;
+      }
+
+      .light-heading,
+      .para-heading,
+      .item-content {
+        color: var(--Grayish-Blue);
+        line-height: 1.7em;
+        font-weight: 400;
+      }
+
+      .light-heading {
+        font-weight: 200 !important;
+        font-size: 1.6rem;
+      }
+
+      header p {
+        text-align: center;
+      }
+
+      header {
+        padding-bottom: 4.5em;
+      }
+
+      .bold-heading {
+        font-size: 1.6rem;
+      }
+
+      .para-heading {
+        margin: 1em auto 0 auto;
+        max-width: 35em;
+      }
+
+      .four-card-grid {
+        display: grid;
+        gap: 1.5em;
+      }
+
+      .grid-item {
+        justify-self: center;
+
+        box-shadow: 0px 10px 16px -1px rgba(76, 78, 97, 0.3);
+        border-radius: 10px;
+        overflow: hidden;
+
+        padding: 1.5em 1.7em;
+        position: relative;
+        max-width: 20em;
+      }
+
+      .grid-item::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        height: 4px;
+        width: 100%;
+      }
+
+      .item1::before {
+        background: var(--Cyan);
+      }
+
+      .item2::before {
+        background: var(--Red);
+      }
+
+      .item3::before {
+        background: var(--Orange);
+      }
+
+      .item4::before {
+        background: var(--Blue);
+      }
+
+      .item-heading {
+        font-size: 1.3rem;
+      }
+
+      .item-content {
+        font-size: 0.85rem;
+      }
+
+      .grid-item > img {
+        margin: 2.5em 0em 0em 78%;
+        width: 55px;
+        height: 55px;
+      }
+
+      @media screen and (min-width: 750px) and (max-width: 1000px) {
+        .four-card-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media screen and (min-width: 1001px) {
+        .four-card-grid {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          max-width: 1000px;
+          margin: 0 auto;
+        }
+
+        .item1 {
+          grid-row: 2 / 3;
+          grid-column: 1 / 2;
+        }
+
+        .item2 {
+          grid-row: 1 / 2;
+          grid-column: 2 / 3;
+        }
+
+        .item3 {
+          grid-row: 2 / 3;
+          grid-column: 2 / 3;
+        }
+
+        .item4 {
+          grid-row: 2 / 3;
+          grid-column: 3 / 4;
+        }
+
+        .item1,
+        .item4 {
+          top: -120px;
+        }
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p class="light-heading">Reliable, efficient delivery</p>
+      <p class="bold-heading">Powered by Technology</p>
+      <p class="para-heading">
+        Our Artificial Intelligence powered tools use millions of project data
+        points to ensure that your project is successful
+      </p>
+    </header>
+    <main class="four-card-grid">
+      <div class="grid-item item1">
+        <p class="item-heading">Supervisor</p>
+        <p class="item-content">
+          Monitors activity to identify project roadblocks
+        </p>
+        <img src="images/icon-supervisor.svg" alt="Supervisor svg" />
+      </div>
+      <div class="grid-item item2">
+        <p class="item-heading">Team Builder</p>
+        <p class="item-content">
+          Scans our talent network to create the optimal team for your project
+        </p>
+        <img src="images/icon-team-builder.svg" alt="Team Builder svg" />
+      </div>
+      <div class="grid-item item3">
+        <p class="item-heading">Karma</p>
+        <p class="item-content">
+          Regularly evaluates our talent to ensure quality
+        </p>
+        <img src="images/icon-karma.svg" alt="Karma svg" />
+      </div>
+      <div class="grid-item item4">
+        <p class="item-heading">Calculator</p>
+        <p class="item-content">
+          Uses data from past projects to provide better delivery estimates
+        </p>
+        <img src="images/icon-calculator.svg" alt="Calculator svg" />
+      </div>
+    </main>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/MrRo-bot">Mr.Robot</a>.
+      </p>
+    </footer>
+  </body>
+</html>
