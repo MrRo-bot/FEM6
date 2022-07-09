@@ -14,7 +14,7 @@
 
 ## Overview
 
-Creating a four card Grid component.
+Created NEWBIE four card Grid component.
 
 ### The challenge
 
@@ -26,7 +26,8 @@ Using Grid properly according to media queries.
 
 ### Links
 
-- GITHUB REPO: [https://github.com/MrRo-bot/FEM6]
+- GITHUB REPO: [https://github.com/MrRo-bot/four-card-feature-section]
+
 - Solution URL: [https://codepen.io/Mr-RO13OT/pen/ZELmoJd]
 
 ## My process
